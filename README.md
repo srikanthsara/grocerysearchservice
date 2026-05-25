@@ -8,6 +8,25 @@
 
 ### REQUEST JSON EXAMPLES
 
+Add Product:
+
+{
+		
+		"productId": "GROC1001",
+		"productName": "Aashirvaad Atta 10KG",
+		"category": "Grocery",
+		"brand": "Aashirvaad",
+		"description": "Premium whole wheat atta suitable for chapatis and rotis",
+		"price": 520,
+		"currency": "INR",
+		"availableQuantity": 150,
+		"rating": 4.6,
+		"inStock": true
+	
+  }
+
+
+
 Search By Keyword
 
 {
@@ -79,16 +98,16 @@ RESPONSE FORMAT
 
 {
 
-  "content": [
-    {
-      "productId": "PROD100",
-      "productName": "iPhone 15"
-    }
-  ],
+	  "content": [
+		{
+		  "productId": "PROD100",
+		  "productName": "iPhone 15"
+		}
+	  ],
 
-  "totalElements": 1,
-  "totalPages": 1,
-  "size": 10,
-  "number": 0
+	  "totalElements": 1,
+	  "totalPages": 1,
+	  "size": 10,
+	  "number": 0
   
 }
