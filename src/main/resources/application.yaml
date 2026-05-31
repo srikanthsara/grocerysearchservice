@@ -1,8 +1,6 @@
 server:
   port: 8762
 
-  servlet:
-    context-path: /grocerysearchservice
 
 spring:
   application:
@@ -16,7 +14,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
 
     show-sql: true
 
@@ -59,7 +57,15 @@ info:
     version: 1.0.0
     description: Production Ready Grocery Search Service
 
-#eureka:
-  #client:
-    #service-url:
-      #defaultZone: http://admin:admin123@localhost:8761/eureka/
+eureka:
+
+  instance:
+
+    prefer-ip-address: true
+
+
+  client:
+
+    service-url:
+      defaultZone:
+        http://localhost:8761/eureka/

@@ -11,6 +11,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(
         name = "product_master",
@@ -51,14 +53,29 @@ public class Product {
     @Column(length = 3000)
     private String description;
 
-    private Double price;
+    @Column(
+            precision = 12,
+            scale = 2
+    )
+    private BigDecimal price;
+
+    @Column(
+            name = "gst_percentage",
+            precision = 5,
+            scale = 2
+    )
+    private BigDecimal gstPercentage;
 
     private String currency;
 
     @Column(name = "available_quantity")
     private Integer availableQuantity;
 
-    private Double rating;
+    @Column(
+            precision = 3,
+            scale = 2
+    )
+    private BigDecimal rating;
 
     @Column(name = "in_stock")
     private Boolean inStock;
