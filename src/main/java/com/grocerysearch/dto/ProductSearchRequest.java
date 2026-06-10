@@ -1,5 +1,6 @@
 package com.grocerysearch.dto;
 
+import com.grocerysearch.utils.Constants;
 import lombok.Data;
 
 @Data
@@ -17,11 +18,11 @@ public class ProductSearchRequest {
 
     private Boolean inStock;
 
-    private String sortBy = "price";
+    private String sortBy = Constants.SORT_BY_COLUMN;
 
-    private String sortDirection = "asc";
+    private String sortDirection = Constants.SORT_DIRECTION;
 
-    private Integer pageNumber = 0;
+    private Integer pageNumber = Constants.PAGE_NUMBER;
 
-    private Integer pageSize = 10;
+    private Integer pageSize = Constants.PAGE_SIZE;
 }

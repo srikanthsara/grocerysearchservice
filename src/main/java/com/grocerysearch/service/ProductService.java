@@ -64,16 +64,12 @@ public class ProductService {
                 sort
         );
 
-        return repository.findAll(
-
-                ProductSpecification.searchProducts(request),
-
+        return repository.findAll(ProductSpecification.searchProducts(request),
                 pageable
         );
     }
     public Product patchProduct(
-            String productId,
-            Map<String, Object> updates) {
+            String productId, Map<String, Object> updates) {
 
         Product existingProduct = getProductById(productId);
         updates.forEach((field, value) -> {
@@ -114,7 +110,6 @@ public class ProductService {
     }
 
     public void deleteProduct(String productId) {
-
         Product existingProduct = getProductById(productId);
         repository.delete(existingProduct);
     }

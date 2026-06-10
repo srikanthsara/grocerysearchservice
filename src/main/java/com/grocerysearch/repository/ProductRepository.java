@@ -6,11 +6,10 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import java.util.List;
 
-public interface ProductRepository extends JpaRepository<Product, String> , JpaSpecificationExecutor<Product> {
+public interface ProductRepository extends JpaRepository<Product, String> ,
+        JpaSpecificationExecutor<Product> {
 
     List<Product> findByProductNameContainingIgnoreCase(String productName);
-
     List<Product> findByCategoryIgnoreCase(String category);
-
     List<Product> findByBrandIgnoreCase(String brand);
 }
