@@ -79,4 +79,7 @@ public class Product {
 
     @Column(name = "in_stock")
     private Boolean inStock;
+
+    @Column(name = "image_url")
+    private String imageUrl;
 }
